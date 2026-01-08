@@ -1,13 +1,20 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { Container, Title } from "./style";
+import { Container, Title, Logo, Button, ButtonText } from "./style";
 
 export default function Home() {
     const navigation = useNavigation<any>();
 
     return (
         <Container>
-            <Title>Hello World</Title>
+            <Title>LEONARDO L CUNHA</Title>
+            <Logo source={{
+                uri:'https://www.pngall.com/wp-content/uploads/5/Pokemon-Go-Logo-PNG-High-Quality-Image.png'
+            }}/>
+
+            <Button onPress={() => navigation.navigate('')}>
+                <ButtonText>Scannear QRCODE</ButtonText>
+            </Button>
         </Container>
     )
 }
