@@ -1,20 +1,25 @@
 import styled from "styled-components/native";
+import {Image} from "react-native"
 
 export const Container = styled.View`
  flex:1;
  background-color: #000;
- align-items:center;
- justify-content: center;
 `
 
-export const Qrscanner = styled.View`
- width:220px;
- height:220px;
- border:2px solid #fff;
- margin-bottom:20px;
-`
-
-export const Text = styled.Text`
+export const LoadingText = styled.Text`
  color: #fff;
- margin-botttom:30px;
+ font-size:16px;
+ align-self:center;
+ margin-top:20px;
 `
+
+export const QrImage = styled(Image)`
+ position: absolute;
+ width: 250px;
+ height: 250px;
+ align-self: center;
+ top: 50%;
+ transform: translateY(-125px);
+ opacity: 0.9;
+`
+ 
