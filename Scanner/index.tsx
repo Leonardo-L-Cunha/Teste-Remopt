@@ -1,4 +1,4 @@
-import { Container, LoadingText, QrImage } from "./style";
+import { Container, LoadingText, QrImage, Text } from "./style";
 import { Camera, useCodeScanner, useCameraDevice } from "react-native-vision-camera";
 
 export default function Scanner() {
@@ -27,6 +27,7 @@ export default function Scanner() {
                 codeScanner={codeScanner}
             />
             <QrImage source={require("../img/qrcode-scanner.png")} />
+            <Text>Aponte a Câmera para o código QR</Text>
         </Container>
     )
 }

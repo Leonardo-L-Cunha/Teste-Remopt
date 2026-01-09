@@ -15,11 +15,17 @@ export const LoadingText = styled.Text`
 
 export const QrImage = styled(Image)`
  position: absolute;
- width: 250px;
- height: 250px;
+ width: 256px;
+ height: 256px;
  align-self: center;
  top: 50%;
  transform: translateY(-125px);
  opacity: 0.9;
 `
- 
+
+export const Text = styled.Text`
+ font-size:14px;
+ color: #fff;
+ text-align:center;
+
+`
