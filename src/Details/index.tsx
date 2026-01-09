@@ -18,7 +18,7 @@ export default function Details() {
             <Text>ID: {pokemon.id}</Text>
             <ImagePokemon source={{ uri: pokemon.image }} />
             <TextContainer>
-                <Text>Name: {pokemon.name}</Text>
+                <Text>Nome: {pokemon.name}</Text>
                 <Text>Type: {pokemon.type}</Text>
                 <Button onPress={() => navigation.navigate('Home')}>
                     <ButtonText>Voltar</ButtonText>
