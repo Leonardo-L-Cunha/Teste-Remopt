@@ -3,33 +3,37 @@ import { Camera, useCodeScanner, useCameraDevice } from "react-native-vision-cam
 import { getPokemon } from "../service";
 import { useNavigation } from "@react-navigation/native";
 import { useRef } from "react";
+import { Pokemon } from "../types/pokemon";
+
 
 export default function Scanner() {
     const device = useCameraDevice('back')
     const navigation = useNavigation<any>()
 
-    const isScanning = useRef(false)
 
     const codeScanner = useCodeScanner({
         codeTypes: ['qr', 'ean-13'],
         onCodeScanned: async (codes) => {
-            
-            if (!isScanning.current) {
-                return 
-            }
-            
+
+
             const id = Number(codes[0].value?.replace(/\D/g, ""))
 
             try {
-                isScanning.current = true
 
-                const pokemon  = await getPokemon(id)
 
-                navigation.navigate("Details", {
-                    pokemon
-                });
+                const pokemonApi = await getPokemon(id)
+
+                const pokemon: Pokemon = {
+                    id: pokemonApi.id,
+                    name: pokemonApi.name.toUpperCase(),
+                    image: pokemonApi.sprites.front_default,
+                    type: pokemonApi.types.map((item:any) => item.type.name.charAt(0).toUpperCase() + item.type.name.slice(1)).join(", ")
+                }
+
+                navigation.navigate("Details", { pokemon });
+
             } catch (error) {
-                isScanning.current = false
+                console.log(error)
             }
 
         }

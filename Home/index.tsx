@@ -31,8 +31,6 @@ export default function Home() {
             ) : (
                 <Text>forneça permisao</Text>
             )}
-
-
         </Container>
     )
 }
