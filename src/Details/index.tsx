@@ -9,7 +9,7 @@ type RouteParams = {
 }
 
 export default function Details() {
-    const route = useRoute<RouteProp<RouteParams, "Details">>();
+    const route = useRoute<RouteProp<RouteParams, "Details">>()
     const { pokemon } = route.params
 
     return (

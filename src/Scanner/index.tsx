@@ -2,7 +2,6 @@ import { Container, LoadingText, QrImage, Text } from "./style";
 import { Camera, useCodeScanner, useCameraDevice } from "react-native-vision-camera";
 import { getPokemon } from "../service";
 import { useNavigation } from "@react-navigation/native";
-import { useRef } from "react";
 import { Pokemon } from "../types/pokemon";
 
 
@@ -10,17 +9,13 @@ export default function Scanner() {
     const device = useCameraDevice('back')
     const navigation = useNavigation<any>()
 
-
     const codeScanner = useCodeScanner({
         codeTypes: ['qr', 'ean-13'],
         onCodeScanned: async (codes) => {
 
-
             const id = Number(codes[0].value?.replace(/\D/g, ""))
 
             try {
-
-
                 const pokemonApi = await getPokemon(id)
 
                 const pokemon: Pokemon = {

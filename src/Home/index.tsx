@@ -5,7 +5,7 @@ import { useCameraPermission } from "react-native-vision-camera";
 import { Text } from "react-native";
 
 export default function Home() {
-    const navigation = useNavigation<any>();
+    const navigation = useNavigation<any>()
     const { hasPermission, requestPermission } = useCameraPermission()
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export default function Home() {
                 const granted = await requestPermission();
                 console.log(granted)
             }
-        };
+        }
         handleAllow()
     }, [])
 
