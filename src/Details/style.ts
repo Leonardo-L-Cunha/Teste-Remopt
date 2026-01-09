@@ -26,3 +26,13 @@ export const ImagePokemon = styled.Image`
  height:250px;
  margin: 20px 0;
 `
+
+export const Button = styled.TouchableOpacity`
+ background-color: #fff;
+ padding:12px 24px;
+ border-radius:6px;
+`
+
+export const ButtonText = styled.Text`
+ font-weight:bold;
+`
