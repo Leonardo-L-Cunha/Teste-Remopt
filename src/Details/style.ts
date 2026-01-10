@@ -1,11 +1,5 @@
 import styled from "styled-components/native";
 
-export const Container = styled.View`
- flex:1;
- background-color: #0b1c2d;
- align-items:center;
- justify-content:space-around;
-`
 
 export const TextContainer = styled.View`
  width:100%;

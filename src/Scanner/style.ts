@@ -27,5 +27,9 @@ export const Text = styled.Text`
  font-size:14px;
  color: #fff;
  text-align:center;
-
+ position: absolute;
+ top:100%;
+ transform: translateY(-125px);
+ opacity: 0.9;
+ margin-left:100px;
 `

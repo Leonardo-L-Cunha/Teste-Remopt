@@ -1,7 +1,7 @@
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { Pokemon } from "../types/pokemon";
-import { Container, Text, ImagePokemon, TextContainer, Button, ButtonText } from "./style";
-
+import { Text, ImagePokemon, TextContainer, Button, ButtonText } from "./style";
+import { Container } from "../Home/style";
 type RouteParams = {
     Details: {
         pokemon: Pokemon
