@@ -25,7 +25,7 @@ export default function Scanner() {
                     type: pokemonApi.types.map((item:any) => item.type.name.charAt(0).toUpperCase() + item.type.name.slice(1)).join(", ")
                 }
 
-                navigation.navigate("Details", { pokemon });
+                navigation.navigate("Details", { pokemon })
 
             } catch (error) {
                 console.log(error)

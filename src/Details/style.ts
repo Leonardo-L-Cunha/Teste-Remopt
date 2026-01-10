@@ -12,7 +12,6 @@ export const TextContainer = styled.View`
  padding-left:50px;
  align-items:flex-start;
  gap: 20px;
-
 `
 
 export const Text = styled.Text`
