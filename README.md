@@ -11,7 +11,7 @@ yarn install
 
 2. Rode o comando para ativar o servidor localmente:
 ```shell
-npm run android
+yarn react-native run-android
 ```
 
 
