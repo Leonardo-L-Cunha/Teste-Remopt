@@ -1,15 +1,15 @@
-# Teste Técnico de Desenvolvimento Mobile
+# Teste Técnico de Desenvolvimento Mobile Remopt
 
 ## Como Rodar o projeto no seu computador
 
 0. Clone o Repositorio no seu computador
 
-3. Instale as dependências do projeto:
+1. Instale as dependências do projeto:
 ```shell
 yarn install
 ```
 
-4. Rode o comando para ativar o servidor localmente:
+2. Rode o comando para ativar o servidor localmente:
 ```shell
 npm run android
 ```
